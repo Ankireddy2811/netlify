@@ -1,0 +1,88 @@
+.side-container{
+  width: 288px;
+  height: 982px;
+  flex-shrink: 0;
+  border-radius: 0px 32px 32px 0px;
+  background: #292929;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  
+  }
+  .image-para{
+    display: flex;
+    align-items: center;
+    width:65%;
+    justify-content: space-between;
+    padding: 20px;
+    
+  }
+  
+  .image{
+    width: 25.333px;
+    height: 29.333px;
+    flex-shrink: 0;
+  }
+  
+  /* background-image: url("https://github.com/AfiyaBorkar/Task1-TheMatrix-labs/blob/main/src/bgimg.png?raw=true");*/
+  .para-text{
+    color: rgba(255, 255, 255, 0.70);
+  font-family: Pacifico;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  }
+  .red-container{
+    width: 288px;
+  height: 65px;
+  flex-shrink: 0;
+  background: #F30050;
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  padding: 20px;
+  border: none;
+  outline: none;
+  }
+  .tok-add{
+    color: var(--cultured-grey, #F7F9F9);
+  font-family: Work Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; 
+  margin-left: 20px;
+  }
+  
+  .normal-cont{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  .pair-add{
+  color: var(--cultured-grey, #F7F9F9);
+  font-family: Work Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; 
+  margin-left: 20px;
+  }
+  
+  .icons-container{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+  }
+  .each-icon{
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+  }

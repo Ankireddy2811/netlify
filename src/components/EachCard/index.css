@@ -1,0 +1,76 @@
+
+.each-list-card{
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.each-card{
+    width: 279px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #390554;
+    margin: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    }
+    .each-subitem{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .basic-info-heading{
+        color: #FFF;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 5px;
+    }
+
+    .created{
+        color: #F5F5F5;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 5px;
+width: 90px;
+height: 18px;
+
+    }
+
+    .value1{
+        color: #F5F5F5;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 5px;
+width: 84px;
+height: 18px;
+flex-grow: 1;
+
+    }
+.my-svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .each-sub-icon{
+       width: 56px;
+       height: 56px;
+       padding: 10px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       align-self: flex-end;
+    }
+    
