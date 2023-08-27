@@ -7,31 +7,20 @@ import EachCard from "../EachCard"
 import "./index.css"
 
 
-class TokenCont extends Component{
+class PairAddress extends Component{
 
-  state={tokenData:[],tokenAddress:"",apiStatus:"INITIAL"}
+  state={pairData:[],pairAddress:"",apiStatus:""}
 
   onChangeSearch = (event)=>{
-    this.setState({tokenAddress:event.target.value})
-  }
-
-  searchImageClicked = async()=>{
-    this.setState({apiStatus:"PROGRESS"})
-   const {tokenAddress} = this.state
-   const response = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${tokenAddress}`);
-   const data = await response.json()
-   data.pairs.sort((a,b)=>b.priceUsd-a.priceUsd);
-   const top10Results = data.pairs.slice(0,3);
-   console.log(top10Results)
-   this.setState({tokenData:top10Results,apiStatus:"SUCCESS"})
+    this.setState({pairAddress:event.target.value})
   }
 
   getSpecificDetails = ()=>{
-    const {apiStatus,tokenData} = this.state
+    const {apiStatus,pairData} = this.state
     if (apiStatus === "SUCCESS"){
       return (
         <ul className="unordered-list">
-   {tokenData.map(eachItem=>(<EachCard key={eachItem.pairCreatedAt} eachContent={eachItem}/>))}
+   {pairData.map(eachItem=>(<EachCard key={eachItem.pairCreatedAt} eachContent={eachItem}/>))}
    </ul>
       )
     }
@@ -53,12 +42,27 @@ class TokenCont extends Component{
   }
 
 
+  searchImageClicked = async()=>{
+   this.setState({apiStatus:"PROGRESS"})
+   const {pairAddress} = this.state
+   const response = await fetch(`https://api.dexscreener.com/latest/dex/search/?q=${pairAddress}`);
+   const data = await response.json()
+   console.log(data)
+   this.setState({pairData:data.pairs})
+   this.setState({apiStatus:"SUCCESS"})
+  }
+
+  connectWallet = ()=>{
+   console.log("hi")
+  }
+
+
 
   render(){
   
   return(
   <div className="token-container">
-  <div className="search-connect-container">
+    <div className="search-connect-container">
    <div className="search-container">
     <input type="search" className="search-ele" placeholder="Search" onChange={this.onChangeSearch}/>
     <button className="search-image" onClick={this.searchImageClicked}>
@@ -67,18 +71,22 @@ class TokenCont extends Component{
     </svg>
     </button>
    </div>
-   <button className="connect-button">
+   <button className="connect-button" onClick={this.connectWallet}>
    Connect
    </button>
    </div>
-   <h1 className="first-heading">Token Search Results</h1>
+   <h1 className="first-heading">Pair Results</h1>
+   
    {this.getSpecificDetails()}
-  
-  
   </div>
 )
-   }
+  }
 
 }
 
-export default TokenCont
+export default PairAddress
+
+
+/*  <ul className="unordered-list">
+   {tokenData.map(eachItem=>(<EachCard key={eachItem.pairCreatedAt} eachContent={eachItem}/>))}
+   </ul> */

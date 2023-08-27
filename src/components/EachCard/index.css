@@ -8,14 +8,17 @@
 }
 .each-card{
     width: 279px;
-    height: 200px;
+    height: 220px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #390554;
     margin: 10px;
-    padding-left: 10px;
+    padding-left: 15px;
     padding-bottom: 15px;
     padding-top: 10px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
     }
     .each-subitem{
         display: flex;
@@ -72,5 +75,13 @@ flex-grow: 1;
        align-items: center;
        justify-content: center;
        align-self: flex-end;
+       background-color: #960252;
+       border-radius: 40px;
+       align-self: flex-end;
     }
-    
+    .icon1{
+        margin-top: 25px;
+    }
+    .icon2{
+        margin-top: 50px;
+    }

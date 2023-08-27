@@ -35,26 +35,27 @@
   line-height: normal;
   }
   .red-container{
-    width: 288px;
-  height: 65px;
-  flex-shrink: 0;
-  background: #F30050;
+   
   display: flex;
   align-items: center;
   justify-content:flex-start;
   padding: 20px;
   border: none;
+  cursor: pointer;
   outline: none;
+  text-decoration: none;
+  background-color: none;
+ 
+
   }
-  .tok-add{
-    color: var(--cultured-grey, #F7F9F9);
-  font-family: Work Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 28px; 
-  margin-left: 20px;
+
+  .special-container{
+    width: 288px;
+    height: 65px;
+    flex-shrink: 0;
+    background: #F30050;
   }
+ 
   
   .normal-cont{
     display: flex;
@@ -64,6 +65,19 @@
     border: none;
     outline: none;
     background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+  }
+
+  .tok-add{
+    color: var(--cultured-grey, #F7F9F9);
+  font-family: Work Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; 
+  margin-left: 20px;
   }
   .pair-add{
   color: var(--cultured-grey, #F7F9F9);
@@ -85,4 +99,10 @@
     width: 24px;
     height: 24px;
     margin: 5px;
+  }
+
+  @media (max-width:568px){
+    .side-container{
+      display: none;
+    }
   }

@@ -12,5 +12,26 @@ flex-shrink: 0;
 background: rgba(0, 0, 0, 0.57);
 background-image: url("https://img.freepik.com/free-photo/man-neon-suit-sits-chair-with-neon-sign-that-says-word-it_188544-27011.jpg?w=1380&t=st=1693061084~exp=1693061684~hmac=034851dfc4f1b23185d672b7f1b30b66a64a599aa56ab164b99d9fdcdf497857");
 display: flex;
-flex-direction: row;
+flex-direction:column;
+}
+.main-container{
+  display: flex;
+  flex-direction: row;
+}
+.colored-box{
+  width: 1516px;
+height: 68px;
+flex-shrink: 0;
+background: #F30050;
+}
+
+
+@media (max-width:568px){
+  .app-container{
+    width: 390px;
+    height: 2793px;
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.57);
+    background-image: none;
+  }
 }
